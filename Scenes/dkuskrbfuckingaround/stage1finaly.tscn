@@ -23,6 +23,8 @@ position = Vector2(22, 179)
 offset = Vector2(0.015, 26.475)
 zoom = Vector2(0.555, 0.555)
 limit_left = -6200
+limit_right = -1120
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

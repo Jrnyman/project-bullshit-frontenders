@@ -33,3 +33,7 @@ position = Vector2(-5744, 508)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(2723, -144)
 shape = SubResource("SegmentShape2D_574lk")
+
+[node name="wavescreen1" type="Camera2D" parent="."]
+position = Vector2(-248, 12)
+zoom = Vector2(0.665, 0.665)

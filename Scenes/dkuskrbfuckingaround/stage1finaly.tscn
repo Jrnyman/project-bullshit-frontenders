@@ -49,3 +49,5 @@ position = Vector2(-1116, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screen-trigger"]
 shape = SubResource("SegmentShape2D_h5gi3")
+
+[connection signal="area_entered" from="screen-trigger" to="." method="_on_screentrigger_area_entered"]

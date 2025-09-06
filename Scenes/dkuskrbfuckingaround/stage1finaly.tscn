@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnqt8y03aq0n"]
+[gd_scene load_steps=7 format=3 uid="uid://cnqt8y03aq0n"]
 
 [ext_resource type="Texture2D" uid="uid://cq0dxxp8r000g" path="res://assets/64a.png" id="1_574lk"]
 [ext_resource type="Script" uid="uid://c3jycf84quu1p" path="res://Scenes/dkuskrbfuckingaround/stage1.gd" id="1_h5gi3"]
 [ext_resource type="PackedScene" uid="uid://cs73ilr7xvmpk" path="res://Scenes/player_1.tscn" id="2_h5gi3"]
+[ext_resource type="Script" uid="uid://c7e8y1qys85ds" path="res://Scenes/dkuskrbfuckingaround/triggsayer.gd" id="4_ov5ca"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_574lk"]
 a = Vector2(-3629, 107)
@@ -46,8 +47,9 @@ zoom = Vector2(0.665, 0.665)
 
 [node name="screen-trigger" type="Area2D" parent="."]
 position = Vector2(-1116, 0)
+script = ExtResource("4_ov5ca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screen-trigger"]
 shape = SubResource("SegmentShape2D_h5gi3")
 
-[connection signal="area_entered" from="screen-trigger" to="." method="_on_screentrigger_area_entered"]
+[connection signal="body_entered" from="screen-trigger" to="." method="_on_screentrigger_body_entered"]

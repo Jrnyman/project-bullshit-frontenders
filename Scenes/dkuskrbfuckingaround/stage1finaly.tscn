@@ -36,8 +36,8 @@ position_smoothing_enabled = true
 [node name="wavescreen1" type="Camera2D" parent="Player1"]
 position = Vector2(5570, 125)
 zoom = Vector2(0.665, 0.665)
-limit_left = 500
-limit_right = 0
+limit_left = 0
+limit_right = 615
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-5744, 508)

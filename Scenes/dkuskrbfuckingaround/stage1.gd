@@ -13,21 +13,21 @@ func _on_screentrigger_body_entered(body: Node2D) -> void:
 	print("camera advance")
 	pass # Replace with function body.
 
-#func _physics_process(delta: float) -> void:
-	#if Input.is_action_just_pressed("camera_debug"):
-		#if playercamera.is_current():
-			#$wavescreen1.make_current()
-		#else:
-			#playercamera.make_current()
-			
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("camera_debug"):
-		if playercamera == $Player1/Camera2D:
-			_changing_camera($wavescreen1)
-			print("debug: advancing")
+		if playercamera.is_current():
+			$Player1/wavescreen1.make_current()
 		else:
-			_changing_camera(playercamera)
-			print("debug: else")
+			playercamera.make_current()
+			
+#func _physics_process(delta: float) -> void:
+	#if Input.is_action_just_pressed("camera_debug"):
+		#if playercamera == $Player1/Camera2D:
+			#_changing_camera($wavescreen1)
+			#print("debug: advancing")
+		#else:
+			#_changing_camera(playercamera)
+			#print("debug: else")
 			
 func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a stored variable i can loose "camera2" at the top i think
 	if transitionTween:

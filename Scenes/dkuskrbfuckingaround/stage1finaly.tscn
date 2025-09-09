@@ -33,16 +33,18 @@ limit_right = -1120
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="wavescreen1" type="Camera2D" parent="Player1"]
+position = Vector2(5570, 125)
+zoom = Vector2(0.665, 0.665)
+limit_left = 500
+limit_right = 0
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-5744, 508)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(2723, -144)
 shape = SubResource("SegmentShape2D_574lk")
-
-[node name="wavescreen1" type="Camera2D" parent="."]
-position = Vector2(-248, 12)
-zoom = Vector2(0.665, 0.665)
 
 [node name="screen-trigger" type="Area2D" parent="."]
 position = Vector2(-1116, 0)

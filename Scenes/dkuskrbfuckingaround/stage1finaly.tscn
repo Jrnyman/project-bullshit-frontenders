@@ -55,5 +55,6 @@ position = Vector2(-1116, 0)
 shape = SubResource("SegmentShape2D_h5gi3")
 
 [node name="transition_camera" type="Camera2D" parent="."]
+visible = false
 
 [connection signal="body_entered" from="screen-trigger" to="." method="_on_screentrigger_body_entered"]

@@ -34,7 +34,7 @@ func _physics_process(_delta: float) -> void:
 			print("debug: else")
 			
 func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a stored variable i can loose "camera2" at the top i think
-	var ani_speed: float = 0.8
+	var ani_speed: float = 0.7
 	
 	if transitionTween:
 		transitionTween.kill() #gotta clear the tween first

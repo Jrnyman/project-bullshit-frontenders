@@ -42,6 +42,11 @@ limit_right = 616
 limit_bottom = 674
 
 [node name="new-transition_camera" type="Camera2D" parent="Player1"]
+limit_left = -6195
+limit_top = -1210
+limit_right = -1116
+limit_bottom = 1353
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

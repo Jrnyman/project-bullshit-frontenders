@@ -3,7 +3,7 @@ extends Node2D
 @onready var cam_trigger = $"screen-trigger"
 #@onready var camera2 = $wavescreen1
 @onready var playercamera: Camera2D = $Player1/Camera2D #declare what kind of shit a variable is gonna be more often
-@onready var transitioncamera: Camera2D = $transition_camera
+@onready var transitioncamera: Camera2D = $"Player1/new-transition_camera"
 
 var transitionTween: Tween #Make all the changes smooth
 var transitionZoomTween: Tween 
@@ -21,7 +21,7 @@ func _on_screentrigger_body_entered(body: Node2D) -> void:
 			#playercamera.make_current()
 			
 func _ready() -> void:
-	$transition_camera.make_current()
+	transitioncamera.make_current()
 	_changing_camera($Player1/Camera2D)
 
 func _physics_process(delta: float) -> void:

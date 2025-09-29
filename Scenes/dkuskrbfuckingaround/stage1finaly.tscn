@@ -41,6 +41,9 @@ limit_top = -405
 limit_right = 616
 limit_bottom = 674
 
+[node name="new-transition_camera" type="Camera2D" parent="Player1"]
+position_smoothing_enabled = true
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-5744, 508)
 

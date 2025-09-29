@@ -27,7 +27,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("camera_debug"):
 		if playercamera == $Player1/Camera2D:
-			_changing_camera($wavescreen1)
+			_changing_camera($Player1/wavescreen1)
 			print("debug: advancing")
 		else:
 			_changing_camera(playercamera)
@@ -46,4 +46,10 @@ func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a
 	var target_zoom: Vector2 = desired_camera.zoom
 	transitionZoomTween.tween_property(transitioncamera, "zoom", target_zoom, 0.5).set_trans(Tween.TRANS_SINE)
 	
+	if transitionOffsetTween:
+		transitionOffsetTween.kill()
+		transitionOffsetTween = create_tween()
+		var target_offset: Vector2 = desired_camera.offset
+		transitionOffsetTween.tween_property(transitioncamera, "offset", target_offset, 0.5).set_trans(Tween.TRANS_SINE)
+		
 	playercamera = desired_camera

@@ -21,13 +21,20 @@ position = Vector2(-1377, 175)
 scale = Vector2(1.404, 1.404)
 texture = ExtResource("1_574lk")
 
+[node name="cam3" type="Camera2D" parent="."]
+position = Vector2(-248, 12)
+limit_left = 616
+limit_top = -2282
+limit_right = 3185
+limit_bottom = 2180
+
 [node name="wavescreen1" type="Camera2D" parent="."]
 position = Vector2(-248, 12)
 zoom = Vector2(0.665, 0.665)
 limit_left = -1119
-limit_top = -405
+limit_top = -593
 limit_right = 616
-limit_bottom = 674
+limit_bottom = 594
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-5796, 66)
@@ -61,7 +68,5 @@ position = Vector2(-1116, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screen-trigger"]
 shape = SubResource("SegmentShape2D_h5gi3")
-
-[node name="transition_camera" type="Camera2D" parent="."]
 
 [connection signal="body_entered" from="screen-trigger" to="." method="_on_screentrigger_body_entered"]

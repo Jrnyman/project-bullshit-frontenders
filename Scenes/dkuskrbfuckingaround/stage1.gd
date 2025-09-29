@@ -51,5 +51,18 @@ func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a
 	transitionOffsetTween = create_tween()
 	var target_offset: Vector2 = desired_camera.offset
 	transitionOffsetTween.tween_property(transitioncamera, "offset", target_offset, 0.5).set_trans(Tween.TRANS_SINE)
-		
+	
+	var limitL: int = desired_camera.limit_left
+	transitioncamera.limit_left = limitL
+	
+	var limitT: int = desired_camera.limit_top
+	transitioncamera.limit_top = limitT
+	
+	var limitR: int = desired_camera.limit_right
+	transitioncamera.limit_right = limitR
+	
+	var limitB: int = desired_camera.limit_bottom
+	transitioncamera.limit_bottom = limitB
+	
+	
 	playercamera = desired_camera

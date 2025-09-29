@@ -21,11 +21,16 @@ position = Vector2(-1377, 175)
 scale = Vector2(1.404, 1.404)
 texture = ExtResource("1_574lk")
 
-[node name="Player1" parent="." instance=ExtResource("2_h5gi3")]
-position = Vector2(-5818, -113)
+[node name="wavescreen1" type="Camera2D" parent="."]
+position = Vector2(-248, 12)
+zoom = Vector2(0.665, 0.665)
+limit_left = -1119
+limit_top = -405
+limit_right = 616
+limit_bottom = 674
 
-[node name="Camera2D" type="Camera2D" parent="Player1"]
-position = Vector2(22, 179)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5796, 66)
 offset = Vector2(0.015, 26.475)
 zoom = Vector2(0.555, 0.555)
 limit_left = -6200
@@ -33,13 +38,8 @@ limit_right = -1120
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="wavescreen1" type="Camera2D" parent="Player1"]
-position = Vector2(5570, 125)
-zoom = Vector2(0.665, 0.665)
-limit_left = -1119
-limit_top = -405
-limit_right = 616
-limit_bottom = 674
+[node name="Player1" parent="." instance=ExtResource("2_h5gi3")]
+position = Vector2(-5818, -113)
 
 [node name="new-transition_camera" type="Camera2D" parent="Player1"]
 limit_left = -6195

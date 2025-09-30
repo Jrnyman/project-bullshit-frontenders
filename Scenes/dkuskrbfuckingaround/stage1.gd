@@ -7,8 +7,7 @@ extends Node2D
 
 @onready var cameras: Array[Camera2D] = [$Camera2D, $wavescreen1, $cam3]
 var currentcam: int = 0
-#@onready var targetcam = cameras[currentcam]
-var ani_speed: float = 0.7
+var ani_speed: float = 1.5
 
 var transitionTween: Tween #Make all the changes smooth
 var transitionZoomTween: Tween 

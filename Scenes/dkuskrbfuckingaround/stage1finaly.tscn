@@ -23,10 +23,11 @@ texture = ExtResource("1_574lk")
 
 [node name="cam3" type="Camera2D" parent="."]
 position = Vector2(-248, 12)
+zoom = Vector2(0.665, 0.665)
 limit_left = 616
-limit_top = -2282
-limit_right = 3185
-limit_bottom = 2180
+limit_top = -6414
+limit_right = 10550
+limit_bottom = 5986
 
 [node name="wavescreen1" type="Camera2D" parent="."]
 position = Vector2(-248, 12)
@@ -46,7 +47,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Player1" parent="." instance=ExtResource("2_h5gi3")]
-position = Vector2(-5818, -113)
+position = Vector2(-5644, -132)
 
 [node name="new-transition_camera" type="Camera2D" parent="Player1"]
 limit_left = -6195

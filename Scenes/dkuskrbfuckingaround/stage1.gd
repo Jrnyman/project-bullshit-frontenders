@@ -5,13 +5,14 @@ extends Node2D
 @onready var playercamera: Camera2D = $Camera2D 
 @onready var transitioncamera: Camera2D = $"Player1/new-transition_camera"
 
-@onready var cameras: Array[Camera2D] = [$Camera2D, $wavescreen1, $cam3]
+@onready var cameras: Array[Camera2D] = [$Camera2D, $wavescreen1, $cam3, $Camera2D2]
 var currentcam: int = 0
 var ani_speed: float = 1.5
 
 var transitionTween: Tween #Make all the changes smooth
 var transitionZoomTween: Tween 
 var transitionOffsetTween: Tween
+var transitionLimitTween: Array[Tween]
 
 func _on_screentrigger_body_entered(body: Node2D) -> void:
 	print("camera advance")
@@ -50,11 +51,11 @@ func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a
 	var target_zoom: Vector2 = desired_camera.zoom
 	transitionZoomTween.tween_property(transitioncamera, "zoom", target_zoom, ani_speed).set_trans(Tween.TRANS_SINE)
 	
-	if transitionOffsetTween:
-		transitionOffsetTween.kill()
-	transitionOffsetTween = create_tween()
-	var target_offset: Vector2 = desired_camera.offset
-	transitionOffsetTween.tween_property(transitioncamera, "offset", target_offset, ani_speed).set_trans(Tween.TRANS_SINE)
+	#if transitionOffsetTween:
+		#transitionOffsetTween.kill()
+	#transitionOffsetTween = create_tween()
+	#var target_offset: Vector2 = desired_camera.offset
+	#transitionOffsetTween.tween_property(transitioncamera, "offset", target_offset, ani_speed).set_trans(Tween.TRANS_SINE)
 	
 	transitioncamera.limit_left = desired_camera.limit_left
 	transitioncamera.limit_top = desired_camera.limit_top

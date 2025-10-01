@@ -46,6 +46,17 @@ limit_right = -1120
 limit_smoothed = true
 position_smoothing_enabled = true
 
+[node name="Camera2D2" type="Camera2D" parent="."]
+position = Vector2(-5796, 66)
+offset = Vector2(0.015, 26.475)
+zoom = Vector2(0.555, 0.555)
+limit_left = 625
+limit_top = -9999654
+limit_right = 5705
+limit_bottom = 10000346
+limit_smoothed = true
+position_smoothing_enabled = true
+
 [node name="Player1" parent="." instance=ExtResource("2_h5gi3")]
 position = Vector2(-5644, -132)
 

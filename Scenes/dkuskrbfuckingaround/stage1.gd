@@ -12,7 +12,6 @@ var ani_speed: float = 1.5
 var transitionTween: Tween #Make all the changes smooth
 var transitionZoomTween: Tween 
 var transitionOffsetTween: Tween
-var transitionLimitTween: Array[Tween]
 
 func _on_screentrigger_body_entered(body: Node2D) -> void:
 	print("camera advance")
@@ -38,12 +37,12 @@ func _physics_process(_delta: float) -> void:
 			print("debug: else")
 			
 func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a stored variable i can loose "camera2" at the top i think
-	
-	if transitionTween:
-		transitionTween.kill() #gotta clear the tween first
-	transitionTween = create_tween()
-	var target_transform: Transform2D = desired_camera.global_transform
-	transitionTween.tween_property(transitioncamera, "global_transform", target_transform, ani_speed).set_trans(Tween.TRANS_SINE)
+	#don't need this is looses the player on camera advance
+	#if transitionTween:
+		#transitionTween.kill() #gotta clear the tween first
+	#transitionTween = create_tween()
+	#var target_transform: Transform2D = desired_camera.global_transform
+	#transitionTween.tween_property(transitioncamera, "global_transform", target_transform, ani_speed).set_trans(Tween.TRANS_SINE)
 	
 	if transitionZoomTween:
 		transitionZoomTween.kill()

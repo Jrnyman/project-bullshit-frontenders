@@ -37,24 +37,13 @@ func _physics_process(_delta: float) -> void:
 			print("debug: else")
 			
 func _changing_camera(desired_camera: Camera2D) -> void: #the (desired-cam) is a stored variable i can loose "camera2" at the top i think
-	#don't need this is looses the player on camera advance
-	#if transitionTween:
-		#transitionTween.kill() #gotta clear the tween first
-	#transitionTween = create_tween()
-	#var target_transform: Transform2D = desired_camera.global_transform
-	#transitionTween.tween_property(transitioncamera, "global_transform", target_transform, ani_speed).set_trans(Tween.TRANS_SINE)
 	
 	if transitionZoomTween:
 		transitionZoomTween.kill()
 	transitionZoomTween = create_tween()
 	var target_zoom: Vector2 = desired_camera.zoom
 	transitionZoomTween.tween_property(transitioncamera, "zoom", target_zoom, ani_speed).set_trans(Tween.TRANS_SINE)
-	
-	#if transitionOffsetTween:
-		#transitionOffsetTween.kill()
-	#transitionOffsetTween = create_tween()
-	#var target_offset: Vector2 = desired_camera.offset
-	#transitionOffsetTween.tween_property(transitioncamera, "offset", target_offset, ani_speed).set_trans(Tween.TRANS_SINE)
+
 	
 	transitioncamera.limit_left = desired_camera.limit_left
 	transitioncamera.limit_top = desired_camera.limit_top

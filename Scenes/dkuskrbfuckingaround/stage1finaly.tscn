@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnqt8y03aq0n"]
+[gd_scene load_steps=7 format=3 uid="uid://cnqt8y03aq0n"]
 
 [ext_resource type="Texture2D" uid="uid://cq0dxxp8r000g" path="res://assets/64a.png" id="1_574lk"]
 [ext_resource type="Script" uid="uid://c3jycf84quu1p" path="res://Scenes/dkuskrbfuckingaround/stage1.gd" id="1_h5gi3"]
 [ext_resource type="PackedScene" uid="uid://cs73ilr7xvmpk" path="res://Scenes/player_1.tscn" id="2_h5gi3"]
+[ext_resource type="Texture2D" uid="uid://chvbhqe44ydjb" path="res://assets/New Drawing.png" id="4_ov5ca"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_574lk"]
 a = Vector2(-3629, 107)
-b = Vector2(7290, 95)
+b = Vector2(12705, 117)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_h5gi3"]
 a = Vector2(0, -914)
@@ -21,12 +22,20 @@ position = Vector2(-1377, 175)
 scale = Vector2(1.404, 1.404)
 texture = ExtResource("1_574lk")
 
+[node name="cam4" type="Camera2D" parent="."]
+position = Vector2(-1122, 117)
+zoom = Vector2(0.415, 0.415)
+limit_left = 10785
+limit_top = 3181
+limit_right = 5265
+limit_bottom = -3030
+
 [node name="cam3" type="Camera2D" parent="."]
 position = Vector2(-248, 12)
 zoom = Vector2(0.435, 0.435)
 limit_left = 616
 limit_top = -794
-limit_right = 10550
+limit_right = 3220
 limit_bottom = 1286
 
 [node name="wavescreen1" type="Camera2D" parent="."]
@@ -50,15 +59,15 @@ position_smoothing_enabled = true
 position = Vector2(-5796, 66)
 offset = Vector2(0.015, 26.475)
 zoom = Vector2(0.555, 0.555)
-limit_left = 625
+limit_left = 3200
 limit_top = -9999654
-limit_right = 5705
+limit_right = 5305
 limit_bottom = 10000346
 limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Player1" parent="." instance=ExtResource("2_h5gi3")]
-position = Vector2(-5644, -132)
+position = Vector2(-5549, -120)
 
 [node name="new-transition_camera" type="Camera2D" parent="Player1"]
 limit_left = -6195
@@ -80,5 +89,10 @@ position = Vector2(-1116, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screen-trigger"]
 shape = SubResource("SegmentShape2D_h5gi3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5113, 146.00002)
+scale = Vector2(2.8718915, 3.036)
+texture = ExtResource("4_ov5ca")
 
 [connection signal="body_entered" from="screen-trigger" to="." method="_on_screentrigger_body_entered"]

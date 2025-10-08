@@ -5,7 +5,7 @@ extends Node2D
 @onready var playercamera: Camera2D = $Camera2D 
 @onready var transitioncamera: Camera2D = $"Player1/new-transition_camera"
 
-@onready var cameras: Array[Camera2D] = [$Camera2D, $wavescreen1, $cam3, $Camera2D2]
+@onready var cameras: Array[Camera2D] = [$Camera2D, $wavescreen1, $cam3, $Camera2D2, $cam4]
 var currentcam: int = 0
 var ani_speed: float = 1.5
 
@@ -15,6 +15,7 @@ var transitionOffsetTween: Tween
 
 func _on_screentrigger_body_entered(body: Node2D) -> void:
 	print("camera advance")
+	
 	pass # Replace with function body.
 			
 func _ready() -> void:

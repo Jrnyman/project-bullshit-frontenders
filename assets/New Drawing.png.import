@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi7t2bxp7qxmj"
-path="res://.godot/imported/km_crouch0001.png-27bdbffcb5454681041188afcd66ffea.ctex"
+uid="uid://s3jp45kcxdcc"
+path="res://.godot/imported/New Drawing.png-3b95b17d2eff902e25ded7ff876ae420.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/karate_man/km_crouch0001.png"
-dest_files=["res://.godot/imported/km_crouch0001.png-27bdbffcb5454681041188afcd66ffea.ctex"]
+source_file="res://assets/New Drawing.png"
+dest_files=["res://.godot/imported/New Drawing.png-3b95b17d2eff902e25ded7ff876ae420.ctex"]
 
 [params]
 
